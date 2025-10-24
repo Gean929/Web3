@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Perfil Dev Web3</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Canvas para linhas roxas e azuis interativas -->
+  <canvas id="linesCanvas"></canvas>
+
+  <!-- Tela de Carregamento -->
+  <div class="loader-wrapper" id="loader">
+    <div class="loader">
+      <div class="loader-bar"></div>
+      <p>Carregando Perfil Web3...</p>
+    </div>
+  </div>
+
+  <!-- Conteúdo principal -->
+  <div class="container hidden" id="content">
+    <div class="card glow-effect">
+      <div class="header">
+        <div>
+          <h1>Gean Farley</h1>
+          <p class="tagline">Desenvolvedor <span>Web3</span> & Criador de Experiências Digitais</p>
+        </div>
+        <div class="status">
+          <div class="status-label">Status</div>
+          <div><span class="status-dot ready"></span>Online</div>
+        </div>
+      </div>
+
+      <div class="progress-bar"><div class="progress" id="progress"></div></div>
+      <p class="progress-text">Perfil em inicialização...</p>
+
+      <div class="grid">
+        <div class="section">
+          <div class="profile-box">
+            <div class="avatar">GF</div>
+            <div>
+              <strong>Identificação Pessoal</strong>
+              <p class="desc">Criador apaixonado por blockchain, smart contracts e inovação digital descentralizada.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="section">
+          <strong>Áreas de Interesse</strong>
+          <ul class="list">
+            <li>Blockchain & Criptografia</li>
+            <li>Smart Contracts (Solidity / Rust)</li>
+            <li>Descentralização & DAOs</li>
+            <li>Tokenomics e NFTs</li>
+          </ul>
+        </div>
+
+        <div class="section">
+          <strong>Principais Habilidades</strong>
+          <ul class="skills">
+            <li>Solidity, React, Next.js</li>
+            <li>IPFS, Ethers.js, Web3.js</li>
+            <li>UI/UX Futurista</li>
+          </ul>
+        </div>
+
+        <div class="section">
+          <strong>Carteira</strong>
+          <p class="wallet-label">Chave Pública:</p>
+          <p class="wallet">0x0384f0c684a21b9a5b1acaf9f78e8d2fd8e1b3e3</p>
+          <div class="buttons">
+            <a href="https://github.com/Gean929" target="_blank" class="btn-gradient">Ver Perfil Web3</a>
+            <a href="#" class="btn-outline" onclick="copiarChave()">Copiar Chave</a>
+          </div>
+        </div>
+
+        <div class="section qr">
+          <strong>QR Code do GitHub</strong>
+          <a href="https://github.com/Gean929" target="_blank">
+            <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://github.com/Gean929"
+                 alt="QR Code GitHub" class="qrcode">
+          </a>
+        </div>
+      </div>
+
+      <div class="footer">
+        <span>© 2025 Perfil Web3 | Gean Farley</span>
+        <span>Build v1.3</span>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
