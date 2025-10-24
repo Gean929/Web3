@@ -1,0 +1,87 @@
+/* ===== Estilo Base ===== */
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background-color: #000;
+  color: #fff;
+  overflow-x: hidden;
+  transition: background 0.3s ease-in-out;
+}
+.hidden { opacity: 0; transition: opacity 0.6s ease-in-out; }
+.fade-out { opacity: 0; transition: opacity 0.8s ease; }
+
+/* ===== Loader ===== */
+.loader-wrapper {
+  position: fixed; inset: 0;
+  background: #000; display: flex; flex-direction: column;
+  justify-content: center; align-items: center; z-index: 9999;
+}
+.loader { text-align: center; }
+.loader-bar {
+  width: 150px; height: 6px; background: linear-gradient(90deg, #6a00ff, #00ffee);
+  border-radius: 10px; animation: loading 1s infinite alternate;
+}
+@keyframes loading { from{opacity:0.3;transform:scaleX(0.5);} to{opacity:1;transform:scaleX(1);} }
+.loader p { margin-top:12px;color:#ccc; }
+
+/* ===== Container Principal ===== */
+.container {
+  display: flex; justify-content: center; align-items: center;
+  min-height: 100vh; padding: 30px; position: relative; z-index: 1;
+}
+.card {
+  background: rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.1);
+  backdrop-filter: blur(10px); border-radius: 20px;
+  max-width: 900px; width:100%; padding:40px;
+  box-shadow:0 0 20px rgba(0,0,0,0.6); transition: all 0.5s ease-in-out;
+}
+.glow-effect { animation: glow 3s ease-in-out infinite alternate; }
+@keyframes glow { from{box-shadow:0 0 10px #00ffee;} to{box-shadow:0 0 40px #6a00ff;} }
+
+/* ===== Cabeçalho ===== */
+.header { display:flex; justify-content:space-between; align-items:center; }
+.header h1{margin:0;font-size:2rem;}
+.header .tagline { color:#aaa; }
+.header .tagline span{color:#00ffee;font-weight:600;}
+.status{text-align:right;}
+.status-dot { display:inline-block; width:10px; height:10px; border-radius:50%; background:#00ff9d; margin-right:6px; }
+
+/* ===== Progress Bar ===== */
+.progress-bar{width:100%;height:6px;background:rgba(255,255,255,0.2);border-radius:10px;margin:20px 0;overflow:hidden;}
+.progress{height:100%;width:0%;background:linear-gradient(90deg,#6a00ff,#00ffee);border-radius:10px;transition:width 0.1s linear;}
+.progress-text{font-size:0.9rem;color:#aaa;}
+
+/* ===== Grid ===== */
+.grid{display:grid;gap:25px;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));margin-top:30px;}
+
+/* ===== Seções ===== */
+.section {
+  background: rgba(255,255,255,0.04); padding:20px; border-radius:14px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; transform-style: preserve-3d; cursor:pointer;
+}
+.section:hover { transform: translateZ(20px) rotateX(3deg) rotateY(-3deg);
+  box-shadow:0 20px 40px rgba(106,0,255,0.5),0 0 20px rgba(106,0,255,0.3); }
+
+.profile-box{display:flex;align-items:center;gap:12px;}
+.avatar{background:linear-gradient(135deg,#6a00ff,#00ffee);width:60px;height:60px;border-radius:50%;font-weight:bold;display:flex;justify-content:center;align-items:center;}
+.list,.skills{list-style:none;padding:0;margin:10px 0 0 0;}
+.list li,.skills li{margin-bottom:6px;color:#ccc;}
+.wallet{word-break:break-all;background:rgba(255,255,255,0.06);padding:6px;border-radius:6px;margin:4px 0 10px 0;}
+
+/* ===== Botões ===== */
+.buttons{display:flex;gap:10px;}
+.btn-gradient{background:linear-gradient(90deg,#6a00ff,#00ffee);color:#000;text-decoration:none;padding:10px 18px;border-radius:8px;font-weight:600;transition:0.3s;}
+.btn-gradient:hover{transform:scale(1.05);}
+.btn-outline{border:1px solid #00ffee;color:#00ffee;text-decoration:none;padding:10px 18px;border-radius:8px;font-weight:600;transition:0.3s;}
+.btn-outline:hover{background:#00ffee;color:#000;}
+
+/* ===== QR Code ===== */
+.qr{text-align:center;}
+.qrcode{margin-top:10px;border-radius:10px;background:#fff;padding:6px;transition:0.3s;box-shadow:0 0 20px #00ffee;}
+.qrcode:hover{transform:scale(1.05);box-shadow:0 0 40px #6a00ff;}
+
+/* ===== Rodapé ===== */
+.footer{display:flex;justify-content:space-between;font-size:0.85rem;color:#777;margin-top:30px;}
+
+/* ===== Canvas linhas roxas e azuis ===== */
+#linesCanvas{position:fixed;top:0;left:0;width:100vw;height:100vh;pointer-events:none;z-index:0;}
